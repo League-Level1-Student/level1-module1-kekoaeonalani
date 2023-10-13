@@ -17,11 +17,11 @@ System.out.println("Your position is " + car.positionInRace);
 		// 3. Crash the RaceCar
 		car.crash();
 		// 4. If the car is damaged. Bring it in for a pit stop.
-car.pit();
+		//??????????????????
 		// 5. Help the car move into first place.
+for(int i  = car.positionInRace; i <= 1; i--) {
 car.overtake();
-car.overtake();
-car.overtake();
+}
 
 	}
 }
