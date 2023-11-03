@@ -66,14 +66,15 @@ public class SolarSystem implements GameControlScene {
     Long startTimeMs = null;
     Game gameFrame = new Game("Solar System");
     
-    Planet mercury = new Planet(50, "grey", 50,80);
-    Planet venus = new Planet(100,"orange",70,200);
-    Planet earth = new Planet(100,"green and blue", 90,365);
-    Planet mars = new Planet(70,"red rust",120,600);
-    Planet jupiter = new Planet(200, "white,orange,red,yellow",170,4000);
-    Planet saturn = new Planet(150,"light brown", 190,10000);
-    Planet uranus = new Planet(130,"light blue",200,30000);
-    Planet neptune = new Planet(130,"blue",220,40000);
+    //Sun is 69.55 diameter
+    Planet mercury = new Planet(15, "grey", 800,80);
+    Planet venus = new Planet(20,"orange",1150,200);
+    Planet earth = new Planet(20,"green and blue", 1390,365);
+    Planet mars = new Planet(17,"red rust",1630,600);
+    Planet jupiter = new Planet(60, "white,orange,red,yellow",2090,4000);
+    Planet saturn = new Planet(57,"light brown",2730,10000);
+    Planet uranus = new Planet(40,"light blue",3190,30000);
+    Planet neptune = new Planet(40,"blue",3760,40000);
     
     
     public SolarSystem() {

@@ -56,12 +56,16 @@ public class HungryHungryHippos implements GameScene, GameControlScene {
     Color boardColor = new Color(138, 198, 193);
     Game gameFrame = new Game("Hungry Hungry Hippos");
     boolean startGame = false;
+    
 
     /*
      * Create your hippo objects here. The "left" input parameter indicates
      * which side the hippo is drawn.
      */
-    Hippo myHippoObject = new Hippo("left");
+    Hippo lizzie = new Hippo("left", "Lizzie", Color.MAGENTA);
+    Hippo henry = new Hippo("right", "Henry", Color.ORANGE);
+    Hippo homer = new Hippo("up", "Homer", Color.GREEN);
+    Hippo harry = new Hippo("down", "Harry", Color.YELLOW);
 
     public HungryHungryHippos() {
         gameFrame.setScene(this);
@@ -96,7 +100,10 @@ public class HungryHungryHippos implements GameScene, GameControlScene {
         /*
          * Draw all the hippos here
          */
-        myHippoObject.draw(g);
+        lizzie.draw(g);
+        homer.draw(g);
+        henry.draw(g);
+        harry.draw(g);
         
         if (startGame) {
             /*
@@ -109,7 +116,10 @@ public class HungryHungryHippos implements GameScene, GameControlScene {
              * checkHippoEating(myHippoObject) method. Make sure to do
              * this for all of your hippos!
              */
-            checkHippoEating(myHippoObject);
+            checkHippoEating(lizzie);
+            checkHippoEating(homer);
+            checkHippoEating(henry);
+            checkHippoEating(harry);
         }
     }
 
@@ -123,13 +133,13 @@ public class HungryHungryHippos implements GameScene, GameControlScene {
         if (keyCode == KeyEvent.VK_S) {
             startGame = true;
         } else if (keyCode == KeyEvent.VK_1) {
-            myHippoObject.eat();
+            lizzie.eat();
         } else if (keyCode == KeyEvent.VK_2) {
-            
+            homer.eat();
         } else if (keyCode == KeyEvent.VK_3) {
-            
+            henry.eat();
         } else if (keyCode == KeyEvent.VK_4) {
-            
+            harry.eat();
         }
     }
     
